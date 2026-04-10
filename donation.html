@@ -1,246 +1,216 @@
+<!DOCTYPE html>
 <html class="no-js" lang="en" dir="ltr">
-
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Rambuke roots (Pvt) Ltd. - Donate</title>
-  <meta name="author" content="Rambuke roots">
-  <meta name="description"
-    content="Support Rambuke roots to plant 1 billion native and endangered plants in Sri Lanka by 2050.">
-  <meta name="keywords" content="Rambuke roots, donation, Sampath Bank, Sri Lanka, reforestation, endangered plants">
-  <meta name="robots" content="INDEX,FOLLOW">
+  <title>Rambuke Roots (Pvt) Ltd. - Donate</title>
+  <meta name="author" content="Rambuke Roots">
+  <meta name="description" content="Support Rambuke Roots to plant 1 billion native and endangered plants in Sri Lanka by 2050.">
   <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+
   <link rel="preconnect" href="https://fonts.googleapis.com/">
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@200;300;400;500;600;700&amp;family=Amatic+SC:wght@400;700&amp;family=Lato:wght@400;700&amp;display=swap"
-    rel="stylesheet">
-  <link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicons/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicons/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicons/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicons/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicons/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicons/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicons/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicons/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicons/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicons/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
-  <link rel="manifest" href="assets/img/favicons/manifest.json">
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="assets/img/favicons/ms-icon-144x144.html">
-  <meta name="theme-color" content="#ffffff">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@700&amp;display=swap" rel="stylesheet">
+
+  <!-- Your original CSS files -->
   <link rel="stylesheet" href="assets/css/bootstrap.rtl.min.css">
   <link rel="stylesheet" href="assets/css/app.min.css">
   <link rel="stylesheet" href="assets/css/fontawesome.min.css">
   <link rel="stylesheet" href="assets/css/animate.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
-</head>
 
-<body class="">
+  <style>
+    .donation-section { padding: 80px 0; background: #f8f9fa; }
+    
+    .left-content h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      line-height: 1.1;
+      color: #1a1a1a;
+    }
+    
+    .left-content .sub-title {
+      color: #00bfff;
+      font-weight: 600;
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+    }
+
+    .form-box {
+      background: white;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 40px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    }
+
+    .form-control, .form-select {
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 14px 18px;
+      margin-bottom: 20px;
+      font-size: 1.05rem;
+    }
+
+    .form-control:focus, .form-select:focus {
+      border-color: #00bfff;
+      box-shadow: 0 0 0 3px rgba(0, 191, 255, 0.15);
+    }
+
+    #donateBtn {
+      background-color: #00bfff;
+      color: white;
+      border: none;
+      padding: 14px 40px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    #donateBtn:hover {
+      background-color: #0099cc;
+    }
+
+    #lkrDisplay {
+      font-weight: 600;
+      color: #28a745;
+      margin: 10px 0 20px 0;
+      font-size: 1.1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Preloader -->
   <div class="preloader">
     <button class="vs-btn preloaderCls">Cancel Preloader</button>
     <div class="preloader-inner">
-      <div class="loader-logo"><img src="assets/img/logo.png" style="max-width: 40%; height: auto;" alt="Rambuke roots">
+      <div class="loader-logo">
+        <img src="assets/img/logo.png" style="max-width: 40%; height: auto;" alt="Rambuke Roots">
       </div>
       <div class="loader-wrap pt-4"><span class="loader"></span></div>
     </div>
   </div>
 
-  <!-- Top bar -->
-  <div class="header-top-wrapper bg-black pb-2 pt-10 z-index-step1 d-none d-lg-block">
+  <!-- Donation Content -->
+  <section class="donation-section">
     <div class="container">
-      <div class="row align-items-center">
-        <div class="col-sm-6 col-md-4 col-lg-4 d-none d-sm-block">
-          <p class="mb-0 fs-xs fw-semibold font-theme d-none d-md-inline-block">
-            <span>Call Us : </span>
-            <a href="tel:+94773386699"> +94 77 338 6699 </a>
-          </p>
-        </div>
-        <div class="col col-md-5 col-lg-4 text-center">
-          <p class="mb-0 fs-xs fw-semibold font-theme d-none d-md-inline-block">
-            <span>Address : </span>
-            No.A | No. 20, Frances Road, Colombo 6 Sri Lanka
-          </p>
-        </div>
-        <div class="col-sm-5 col-md-3 col-lg-4 text-center text-sm-end">
-          <div class="head-top-links">
-            <p class="mb-0 fs-xs fw-semibold font-theme d-none d-md-inline-block">
-              <a href="mailto:dillont0777@gmail.com">dillont0777@gmail.com</a>
-              <span class="text-theme"> : Mail Us</span>
-            </p>
+      <div class="row align-items-start gx-5">
+        
+        <!-- Left Side -->
+        <div class="col-lg-6 left-content mb-5">
+          <p class="sub-title mb-2">CHOOSE HOW YOU GIVE</p>
+          <h1 class="mb-4">Support the 1B Plants by<br>2050 Fund</h1>
+          
+          <div style="margin: 20px 0;">
+            <span style="color:#f4c542; font-size:1.4rem;">✦✦✦</span>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Sticky header -->
-  <div class="sticky-header-wrap sticky-header py-2 py-lg-1">
-    <div class="container position-relative">
-      <div class="row align-items-center">
-        <div class="col-5 col-md-3">
-          <div class="logo">
-            <a href="index-2.html">
-              <img src="assets/img/logo.png" style="max-width: 40%; height: auto;" alt="Rambuke roots">
-            </a>
-          </div>
-        </div>
-        <div class="col-7 col-md-9 text-end position-static">
-          <nav class="main-menu menu-sticky1 d-none d-lg-block link-inherit">
-            <ul>
-              <li><a href="contact.html">Contact Us</a></li>
-              <li><a href="products.html">Our Products</a></li>
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="https://myfees.lk/" rel="noopener">Donate</a></li>
-              <li><a href="index-2.html">Home</a></li>
-            </ul>
-          </nav>
-          <button class="vs-menu-toggle d-inline-block d-lg-none"><i class="far fa-bars"></i></button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Hero / breadcumb -->
-  <div class="breadcumb-wrapper breadcumb-layout1 bg-fluid pt-200 pb-200" data-bg-src="assets/img/d1.png">
-    <div class="container">
-      <div class="breadcumb-content text-center">
-        <h1 class="breadcumb-title text-white">
-          Plant 1 Billion Roots by 2050
-        </h1>
-        <ul class="breadcumb-menu-style1 mx-auto">
-          <li><a href="index-2.html">Home</a></li>
-          <li class="active">Donate</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <!-- Donation Section -->
-  <section class="vs-about-wrapper position-relative bg-fluid about-layout1 space-md-bottom"
-    data-bg-src="assets/img/about/about-bg-1-1.png">
-    <div class="container">
-      <div class="row gx-60 align-items-start">
-        <div class="col-lg-6 mb-40">
-          <div class="section-title mb-20">
-            <span class="sub-title4">Choose How You Give</span>
-            <h2 class="sec-title4 mb-3">Support the 1B Plants by 2050 Fund</h2>
-            <img src="assets/img/icons/sec-icon-1.png" alt="Icon">
-          </div>
-          <p class="fs-md">
-            As a guideline, we estimate that <strong>USD 2</strong> can support the raising, planting, and early care
-            of <strong>one native sapling</strong>. You are welcome to contribute <strong>any amount</strong> you wish.
+          
+          <p class="fs-md text-muted">
+            As a guideline, we estimate that <strong>USD 2</strong> can support the raising, planting, 
+            and early care of <strong>one native sapling</strong>. You are welcome to contribute any amount you wish.
           </p>
         </div>
 
-        <!-- RIGHT -->
+        <!-- Right Side - Form -->
         <div class="col-lg-6">
-          <div class="inner-wrap1 px-40 py-40">
+          <div class="form-box">
+            <h3 class="mb-4" style="font-weight:600;">Donation Details</h3>
+            
+            <form id="donationForm">
+              <input type="text" placeholder="Full Name" class="form-control" required>
+              <input type="email" placeholder="Email" class="form-control" required>
+              <input type="tel" placeholder="Phone" class="form-control">
 
-            <h3>Donation Details</h3>
+              <!-- USD Amount Dropdown -->
+              <div class="mb-4">
+                <label class="form-label fw-semibold">Select Donation Amount (USD)</label>
+                <select id="presetAmountSelect" class="form-select">
+                  <option value="">— Choose an amount —</option>
+                  <option value="50">USD 50</option>
+                  <option value="100">USD 100</option>
+                  <option value="500">USD 500</option>
+                  <option value="1000">USD 1,000</option>
+                  <option value="2000">USD 2,000</option>
+                  <option value="5000">USD 5,000</option>
+                  <option value="10000">USD 10,000</option>
+                  <option value="20000">USD 20,000</option>
+                  <option value="30000">USD 30,000</option>
+                  <option value="40000">USD 40,000</option>
+                  <option value="50000">USD 50,000</option>
+                </select>
+              </div>
 
-            <form id="sampathDonationForm">
-
-              <!-- Donor -->
-              <input type="text" placeholder="Full Name" class="form-control mb-2" required>
-              <input type="email" placeholder="Email" class="form-control mb-2" required>
-              <input type="tel" placeholder="Phone" class="form-control mb-2">
-
-              <!-- Amount -->
-              <input type="number" id="donationAmountInput" class="form-control mb-2" placeholder="Amount" required>
-
-              <!-- Currency -->
-              <select id="currencySelect" class="form-control mb-2">
-                <option value="USD">USD</option>
-                <option value="GBP">GBP</option>
-                <option value="EUR">EUR</option>
-                <option value="CNY">CNY</option>
-              </select>
-
-              <!-- LKR DISPLAY -->
+              <!-- LKR Display -->
               <p id="lkrDisplay"></p>
 
-              <!-- ✅ UPDATED BUTTON -->
-              <a href="#" id="donateBtn" class="vs-btn">Click to donate</a>
-
+              <!-- Donate Button -->
+              <a href="#" id="donateBtn" class="btn">Click to donate</a>
             </form>
-
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- ========================= -->
-  <!-- JS -->
-  <!-- ========================= -->
-
   <script>
-    // PRELOADER FIX
-    window.addEventListener('load', function () {
+    // Preloader
+    window.addEventListener('load', () => {
       document.querySelector('.preloader').style.display = 'none';
     });
 
-    // CURRENCY CONVERSION (UNCHANGED LOGIC)
-    const conversionRates = {
-      USD: 315,
-      GBP: 425,
-      EUR: 340,
-      CNY: 45
-    };
+    // Conversion Rate (1 USD = LKR)
+    const usdToLkrRate = 315;   // You can update this rate anytime
 
-    const amountInput = document.getElementById("donationAmountInput");
-    const currencySelect = document.getElementById("currencySelect");
+    const amountSelect = document.getElementById("presetAmountSelect");
     const lkrDisplay = document.getElementById("lkrDisplay");
 
+    // Update LKR display when amount changes
     function updateLKR() {
-      const amount = parseFloat(amountInput.value);
-      const currency = currencySelect.value;
-
-      if (!isNaN(amount)) {
-        const lkr = amount * conversionRates[currency];
-        lkrDisplay.textContent = "≈ LKR " + lkr.toLocaleString();
+      const amount = parseFloat(amountSelect.value);
+      if (amount && !isNaN(amount)) {
+        const lkr = amount * usdToLkrRate;
+        lkrDisplay.innerHTML = `≈ <strong>LKR ${lkr.toLocaleString()}</strong>`;
       } else {
         lkrDisplay.textContent = "";
       }
     }
 
-    amountInput.addEventListener("input", updateLKR);
-    currencySelect.addEventListener("change", updateLKR);
+    amountSelect.addEventListener("change", updateLKR);
 
-    // =========================
-    // ✅ YOUR REQUESTED LOGIC
-    // =========================
-    document.getElementById("donateBtn").addEventListener("click", function (e) {
+    // Payment Links (Replace with your real GenieBiz USD links)
+    const paymentLinks = {
+      "50":    "https://paylink.geniebiz.lk/8JgJq5bjmm",
+      "100":   "https://paylink.geniebiz.lk/3BEbXrMOw8",
+      "500":   "https://paylink.geniebiz.lk/yRVR2nz40z",
+      "1000":  "https://paylink.geniebiz.lk/WjKQd9gaxg",
+      "2000":  "https://paylink.geniebiz.lk/Bak2m67G80",
+      "5000":  "https://paylink.geniebiz.lk/qxb87AbV5o",
+      "10000": "https://paylink.geniebiz.lk/lpkE8jG3Ja",
+      "20000": "https://paylink.geniebiz.lk/BE8ObW7z8K",
+      "30000": "https://paylink.geniebiz.lk/8E7ANMVNb9",
+      "40000": "https://paylink.geniebiz.lk/rxX5wlJj3A",
+      "50000": "https://paylink.geniebiz.lk/EreylQroDO"
+    };
+
+    const generalLink = "https://paylink.geniebiz.lk/yd64Gw8dlJ";
+
+    // Donate Button
+    document.getElementById("donateBtn").addEventListener("click", function(e) {
       e.preventDefault();
 
-      const amount = parseFloat(document.getElementById("donationAmountInput").value);
+      const selectedAmount = amountSelect.value;
 
-      if (isNaN(amount) || amount <= 0) {
-        alert("Enter valid amount");
+      if (!selectedAmount) {
+        alert("Please select a donation amount.");
         return;
       }
 
-      let link = "";
-
-      if (amount === 5000) {
-        link = "https://paylink.geniebiz.lk/qxb87AbV5o";
-      } else if (amount === 10000) {
-        link = "https://paylink.geniebiz.lk/n48W3JABXk";
-      } else if (amount === 15000) {
-        link = "https://paylink.geniebiz.lk/5D98xPOEem";
-      } else {
-        link = "https://paylink.geniebiz.lk/yd64Gw8dlJ";
-      }
-
+      const link = paymentLinks[selectedAmount] || generalLink;
       window.location.href = link;
     });
-
   </script>
-
 </body>
 </html>
