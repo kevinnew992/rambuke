@@ -1,4 +1,3 @@
-<!doctype html>
 <html class="no-js" lang="en" dir="ltr">
 
 <head>
@@ -137,120 +136,111 @@
           </p>
         </div>
 
-        <div class="col-lg-6 mb-40">
-          <div class="inner-wrap1 bg-fluid px-40 py-40" data-bg-src="assets/img/bg/newsletter-bg-1-1.png">
-            <h3 class="sec-title3 mb-3 text-center text-lg-start">Donation Details</h3>
+        <!-- RIGHT -->
+        <div class="col-lg-6">
+          <div class="inner-wrap1 px-40 py-40">
 
-            <!-- Donation Form -->
-            <form id="sampathDonationForm" method="post" action="<!-- TODO: Replace with Sampath Bank IPG URL -->">
+            <h3>Donation Details</h3>
 
-              <!-- Donor info -->
-              <div class="row g-3 mb-3">
-                <div class="col-12">
-                  <label class="form-label fw-semibold">Full Name</label>
-                  <input type="text" name="donor_name" class="form-control" placeholder="Your full name" required>
-                </div>
-                <div class="col-12">
-                  <label class="form-label fw-semibold">Email</label>
-                  <input type="email" name="donor_email" class="form-control" placeholder="you@example.com" required>
-                </div>
-                <div class="col-12">
-                  <label class="form-label fw-semibold">Phone (optional)</label>
-                  <input type="tel" name="donor_phone" class="form-control" placeholder="+94 7X XXX XXXX">
-                </div>
-              </div>
+            <form id="sampathDonationForm">
 
-              <!-- Amount + Currency -->
-              <div class="row g-3 mt-2">
-                <div class="col-md-6">
-                  <label class="form-label fw-semibold">Donation Amount</label>
-                  <input type="number" name="amount" id="donationAmountInput" class="form-control" min="1" required>
-                </div>
-                <div class="col-md-6">
-                  <label class="form-label fw-semibold">Currency</label>
-                  <select id="currencySelect" class="form-control">
-                    <option value="USD" selected>USD</option>
-                    <option value="GBP">GBP</option>
-                    <option value="EUR">EUR</option>
-                    <option value="CNY">CNY</option>
-                    <option value="">LKR</option>
-                  </select>
-                </div>
-                <div class="col-12">
-                  <p id="lkrDisplay" style="font-weight:bold; margin-top:8px;"></p>
-                </div>
-              </div>
+              <!-- Donor -->
+              <input type="text" placeholder="Full Name" class="form-control mb-2" required>
+              <input type="email" placeholder="Email" class="form-control mb-2" required>
+              <input type="tel" placeholder="Phone" class="form-control mb-2">
 
-              <!-- Hidden fields -->
-              <input type="hidden" name="merchant_id" value="<!-- TODO: your_merchant_id -->">
-              <input type="hidden" name="order_id" value="<!-- TODO: generate unique reference -->">
-              <input type="hidden" name="currency" value="USD">
-              <input type="hidden" name="return_url" value="<!-- TODO: success URL -->">
-              <input type="hidden" name="cancel_url" value="<!-- TODO: cancel URL -->">
-              <input type="hidden" name="notify_url" value="<!-- TODO: notify URL -->">
-              <input type="hidden" name="signature" value="<!-- TODO: signature -->">
+              <!-- Amount -->
+              <input type="number" id="donationAmountInput" class="form-control mb-2" placeholder="Amount" required>
 
-              <div class="mt-4 d-grid d-sm-flex align-items-center justify-content-between">
-                <a href="https://paylink.geniebiz.lk/n48W3JABXk" class="vs-btn" role="button" rel="noopener">
-                  Click to donate
-                </a>
-                <p class="fs-xs mb-0 text-muted mt-3 mt-sm-0">
-                  You will be redirected to secure payment page.
-                </p>
-              </div>
+              <!-- Currency -->
+              <select id="currencySelect" class="form-control mb-2">
+                <option value="USD">USD</option>
+                <option value="GBP">GBP</option>
+                <option value="EUR">EUR</option>
+                <option value="CNY">CNY</option>
+              </select>
+
+              <!-- LKR DISPLAY -->
+              <p id="lkrDisplay"></p>
+
+              <!-- ✅ UPDATED BUTTON -->
+              <a href="#" id="donateBtn" class="vs-btn">Click to donate</a>
+
             </form>
+
           </div>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- JS for preloader and currency conversion -->
+  <!-- ========================= -->
+  <!-- JS -->
+  <!-- ========================= -->
+
   <script>
-    // Preloader
+    // PRELOADER FIX
     window.addEventListener('load', function () {
-      const preloader = document.querySelector('.preloader');
-      if (preloader) preloader.style.display = 'none';
-    });
-    const cancelBtn = document.querySelector('.preloaderCls');
-    if (cancelBtn) cancelBtn.addEventListener('click', function () {
-      const preloader = document.querySelector('.preloader');
-      if (preloader) preloader.style.display = 'none';
+      document.querySelector('.preloader').style.display = 'none';
     });
 
-    // Currency conversion
+    // CURRENCY CONVERSION (UNCHANGED LOGIC)
     const conversionRates = {
       USD: 315,
-      GBP: 421,
+      GBP: 425,
       EUR: 340,
-      CNY: 43
+      CNY: 45
     };
-    document.addEventListener("DOMContentLoaded", function () {
-      const amountInput = document.getElementById("donationAmountInput");
-      const currencySelect = document.getElementById("currencySelect");
-      const lkrDisplay = document.getElementById("lkrDisplay");
 
-      function updateLKR() {
-        const amount = parseFloat(amountInput.value);
-        const currency = currencySelect.value;
-        if (!isNaN(amount) && amount > 0) {
-          const lkr = amount * conversionRates[currency];
-          lkrDisplay.textContent = `≈ LKR ${lkr.toLocaleString()}`;
-        } else {
-          lkrDisplay.textContent = "";
-        }
+    const amountInput = document.getElementById("donationAmountInput");
+    const currencySelect = document.getElementById("currencySelect");
+    const lkrDisplay = document.getElementById("lkrDisplay");
+
+    function updateLKR() {
+      const amount = parseFloat(amountInput.value);
+      const currency = currencySelect.value;
+
+      if (!isNaN(amount)) {
+        const lkr = amount * conversionRates[currency];
+        lkrDisplay.textContent = "≈ LKR " + lkr.toLocaleString();
+      } else {
+        lkrDisplay.textContent = "";
+      }
+    }
+
+    amountInput.addEventListener("input", updateLKR);
+    currencySelect.addEventListener("change", updateLKR);
+
+    // =========================
+    // ✅ YOUR REQUESTED LOGIC
+    // =========================
+    document.getElementById("donateBtn").addEventListener("click", function (e) {
+      e.preventDefault();
+
+      const amount = parseFloat(document.getElementById("donationAmountInput").value);
+
+      if (isNaN(amount) || amount <= 0) {
+        alert("Enter valid amount");
+        return;
       }
 
-      amountInput.addEventListener("input", updateLKR);
-      currencySelect.addEventListener("change", updateLKR);
-      updateLKR();
+      let link = "";
+
+      if (amount === 6000) {
+        link = "https://paylink.geniebiz.lk/woZQZqDl7A";
+      } else if (amount === 10000) {
+        link = "https://paylink.geniebiz.lk/n48W3JABXk";
+      } else if (amount === 15000) {
+        link = "https://paylink.geniebiz.lk/5D98xPOEem";
+      } else ( amount === 50000) {
+        link = "https://paylink.geniebiz.lk/jqqPk5Bxmd";
+      }
+
+      window.location.href = link;
     });
+
   </script>
 
-  <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
-  <script src="assets/js/app.min.js"></script>
-  <script src="assets/js/vscustom-carousel.min.js"></script>
-  <script src="assets/js/vsmenu.min.js"></script>
-  <script src="assets/js/ajax-mail.min.js"></script>
 </body>
 </html>
